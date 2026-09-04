@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "5a558a62-08cd-4656-99ea-7c5fa9a533c9",
+    "name": "Drone Delivery Service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28141266",
+    "_collection_link": "https://go.postman.co/collection/28141266-5a558a62-08cd-4656-99ea-7c5fa9a533c9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/api/drones/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"serialNumber\": \"12SE212NBCN43\",\r\n    \"model\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/drones/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drones",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/drones/load",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"serialNumber\": \"12SE212NBCN43\",\r\n    \"medication\": {\r\n        \"name\": \"Paracetamol-500mg\",\r\n        \"code\": \"PARA_500\",\r\n        \"weight\": 300,\r\n        \"image\": \"http://www.image.url/\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/drones/load",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drones",
+            "load"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/drones/loaded/{serialNumber}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/drones/loaded/12SE212NBCN43",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drones",
+            "loaded",
+            "12SE212NBCN43"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/drones/available",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/drones/available",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drones",
+            "available"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/drones/{serialNumber}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/drones/12SE212N31112",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drones",
+            "12SE212N31112"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
